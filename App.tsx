@@ -1,20 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { SearchContextProvider } from './contexts/SearchContext/SearchContext';
+import { ThemeContextProvider } from './contexts/ThemeContext/ThemeContext';
+import { AppNavigation } from './src/Navigation/AppNavigation';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SearchContextProvider>
+      <ThemeContextProvider>
+        <AppNavigation />
+      </ThemeContextProvider>
+    </SearchContextProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
