@@ -26,8 +26,8 @@ export const Header = ( ) => {
                 <Image 
                     source={require("../../../assets/images/logo.png")}
                     style={{
-                        width: 100,
-                        height: 40
+                        width: 120,
+                        height: 50
                     }}
                 />
             </View>

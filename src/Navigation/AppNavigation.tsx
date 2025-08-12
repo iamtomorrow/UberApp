@@ -52,7 +52,7 @@ export const AppNavigation = ( ) => {
                     component={ HomeStack }
                     options={{
                         tabBarLabelStyle: {
-                            fontSize: 12,
+                            fontSize: 13,
                             color: theme.colors.fonts.default
                         },
                         tabBarIcon: ({ }) => (
@@ -74,7 +74,7 @@ export const AppNavigation = ( ) => {
                     component={ Services }
                     options={{
                         tabBarLabelStyle: {
-                            fontSize: 12,
+                            fontSize: 13,
                             color: theme.colors.fonts.default
                         },
                         tabBarIcon: ({ }) => (
@@ -96,7 +96,7 @@ export const AppNavigation = ( ) => {
                     component={ Activity }
                     options={{
                         tabBarLabelStyle: {
-                            fontSize: 12,
+                            fontSize: 13,
                             color: theme.colors.fonts.default
                         },
                         tabBarIcon: ({ }) => (
@@ -118,7 +118,7 @@ export const AppNavigation = ( ) => {
                 component={ Account }
                 options={{
                     tabBarLabelStyle: {
-                        fontSize: 12,
+                        fontSize: 13,
                         color: theme.colors.fonts.default
                     },
                     tabBarIcon: ({ }) => (
