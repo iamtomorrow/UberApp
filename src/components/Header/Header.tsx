@@ -11,7 +11,7 @@ export const Header = ( ) => {
         style={{
             marginTop: StatusBar.currentHeight,
             width: "100%",
-            height: 90,
+            height: 100,
             padding: 6,
             backgroundColor: theme.colors.surface.primary
         }}>
@@ -26,8 +26,8 @@ export const Header = ( ) => {
                 <Image 
                     source={require("../../../assets/images/logo.png")}
                     style={{
-                        width: 120,
-                        height: 50
+                        width: 140,
+                        height: 60
                     }}
                 />
             </View>

@@ -9,7 +9,7 @@ export const HomeSearchBar = ( ) => {
     const [ textInput, setTextInput ] = useState<string>(""); 
 
     const {theme} = useContext( ThemeContext );
-    const { query, updateQuery } = useContext( SearchContext );
+    const { query, result, updateQuery } = useContext( SearchContext );
 
     useEffect(( ) => {  
         updateQuery( textInput );
@@ -53,6 +53,42 @@ export const HomeSearchBar = ( ) => {
 
                 </TextInput>
             </View>
+
+            { result && query != ""
+            ? <View
+            style={{
+                position: "static",
+                height: "auto",
+                width: "100%",
+                display: "flex",
+                backgroundColor: "red",
+                flexDirection: "column"
+            }}>
+                { result.map((item) => (
+                    <View
+                    style={{            
+                        width: "100%",
+                        height: "auto",
+                        padding: 6,
+                        display: "flex",
+                        flexDirection: "column",
+                    }}>
+                        <View>
+                            <Text>{ item?.UF } - { item?.Name }</Text>
+                        </View>
+                        <View>
+                            <Text
+                            style={{
+                                fontSize: 8
+                            }}>{ item?.Centroide }</Text>
+                        </View>
+                    </View>
+                ))}
+            </View>
+            : <View>
+                <Text>No content</Text>
+            </View>
+            }
         </View>
     )
 }
