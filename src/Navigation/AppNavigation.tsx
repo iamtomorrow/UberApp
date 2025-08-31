@@ -12,6 +12,7 @@ import { View } from "react-native";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 import { Services } from "../screens/Services/Services";
+import { PlanYourRide } from "../screens/PlanYourRide/PlanYourRide";
 
 const Stack = createNativeStackNavigator( );
 const Tabs = createBottomTabNavigator( );
@@ -26,6 +27,7 @@ const HomeStack = ( ) => {
             <Stack.Screen name="Home" component={ Home } />
             <Stack.Screen name="Activity" component={ Activity } />
             <Stack.Screen name="Account" component={ Account } />
+            <Stack.Screen name="PlanYourRide" component={ PlanYourRide } />
 
         </Stack.Navigator>
     )

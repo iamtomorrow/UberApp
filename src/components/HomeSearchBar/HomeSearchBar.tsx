@@ -4,13 +4,18 @@ import { ThemeContext } from "../../../contexts/ThemeContext/ThemeContext";
 import { useContext, useEffect, useState } from "react";
 import Icon from "react-native-remix-icon"
 import { SearchContext } from "../../../contexts/SearchContext/SearchContext";
+import { useNavigation } from "@react-navigation/native";
 
 export const HomeSearchBar = ( ) => {
     const [ textInput, setTextInput ] = useState<string>(""); 
-
-    const {theme} = useContext( ThemeContext );
+    const { theme } = useContext( ThemeContext );
     const { query, result, updateQuery } = useContext( SearchContext );
+    const nav = useNavigation( );
 
+    const navigateTo = ( ) => {
+        nav.navigate({ screen: "PlanYourRide", name: "PlanYourRide" } as never)
+    }
+    
     useEffect(( ) => {  
         updateQuery( textInput );
     }, [ textInput ]);
@@ -41,6 +46,7 @@ export const HomeSearchBar = ( ) => {
                     size={28}
                 />
                 <TextInput
+                onPress={ navigateTo }
                 value={ textInput }
                 onChangeText={ (text) => setTextInput(text)}
                 placeholder="Where to?"
