@@ -2,7 +2,7 @@
 import { useContext } from "react"
 import { Pressable, Text } from "react-native"
 import Icon from "react-native-remix-icon"
-import { ThemeContext } from "../../../contexts/ThemeContext/ThemeContext"
+// import { ThemeContext } from "../../../contexts/ThemeContext/ThemeContext"
 
 interface DropdownProps {
     name: string 
@@ -10,7 +10,7 @@ interface DropdownProps {
 }
 
 export const Dropdown = ({ name, iconName }: DropdownProps ) => {
-    const { theme } = useContext( ThemeContext );
+    // const { theme } = useContext( ThemeContext );
 
     return (
         <Pressable
@@ -23,7 +23,7 @@ export const Dropdown = ({ name, iconName }: DropdownProps ) => {
             borderRadius: 40,
             flexDirection: "row",
             justifyContent: "center",
-            backgroundColor: theme.colors.surface.secondary,
+            backgroundColor: "#ffffff",
             columnGap: 10,
         }}>
             <Icon name={ iconName as any } size={36} />

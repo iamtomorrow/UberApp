@@ -7,8 +7,6 @@ import { Activity } from "../screens/Activity/Activity";
 import { Account } from "../screens/Account/Account";
 
 import Icon from "react-native-remix-icon";
-import { MaterialIcons } from "@expo/vector-icons";
-import { View } from "react-native";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext/ThemeContext";
 import { Services } from "../screens/Services/Services";
